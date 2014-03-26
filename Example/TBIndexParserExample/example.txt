@@ -1,0 +1,22 @@
+#Bigger Header Ever
+
+##Nice and Big Header
+
+###Nice Header will
+
+
+*bold is bold*
+
+_something better in italic_
+
+~~something to stroke through~~
+
+@lisacintosh.com
+
+- [ ] Must be done
+
+- [x] It's done!
+
+{ 8/10 } Need to done 2 times
+
+[Step name]

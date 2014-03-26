@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5055C54018E356C900DF670F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5055C53F18E356C900DF670F /* Cocoa.framework */; };
+		5055C54A18E356C900DF670F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5055C54818E356C900DF670F /* InfoPlist.strings */; };
+		5055C54C18E356C900DF670F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055C54B18E356C900DF670F /* main.m */; };
+		5055C55018E356C900DF670F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5055C54E18E356C900DF670F /* Credits.rtf */; };
+		5055C55318E356C900DF670F /* TBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055C55218E356C900DF670F /* TBAppDelegate.m */; };
+		5055C55618E356C900DF670F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5055C55418E356C900DF670F /* MainMenu.xib */; };
+		5055C56218E356F100DF670F /* IndexWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055C55C18E356F100DF670F /* IndexWebView.m */; };
+		5055C56318E356F100DF670F /* NSMutableString+additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055C55D18E356F100DF670F /* NSMutableString+additions.m */; };
+		5055C56418E356F100DF670F /* NSPasteboardItem+additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055C55E18E356F100DF670F /* NSPasteboardItem+additions.m */; };
+		5055C56718E3570A00DF670F /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 5055C56618E3570A00DF670F /* index.html */; };
+		5055C56A18E3580600DF670F /* example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5055C56918E3580600DF670F /* example.txt */; };
+		5055C56C18E3585100DF670F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5055C56B18E3585100DF670F /* WebKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5055C53C18E356C900DF670F /* TBIndexParserExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBIndexParserExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5055C53F18E356C900DF670F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		5055C54218E356C900DF670F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		5055C54318E356C900DF670F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5055C54418E356C900DF670F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5055C54718E356C900DF670F /* TBIndexParserExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TBIndexParserExample-Info.plist"; sourceTree = "<group>"; };
+		5055C54918E356C900DF670F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5055C54B18E356C900DF670F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5055C54D18E356C900DF670F /* TBIndexParserExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TBIndexParserExample-Prefix.pch"; sourceTree = "<group>"; };
+		5055C54F18E356C900DF670F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		5055C55118E356C900DF670F /* TBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBAppDelegate.h; sourceTree = "<group>"; };
+		5055C55218E356C900DF670F /* TBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBAppDelegate.m; sourceTree = "<group>"; };
+		5055C55518E356C900DF670F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		5055C55C18E356F100DF670F /* IndexWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IndexWebView.m; path = ../../IndexWebView.m; sourceTree = "<group>"; };
+		5055C55D18E356F100DF670F /* NSMutableString+additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableString+additions.m"; path = "../../NSMutableString+additions.m"; sourceTree = "<group>"; };
+		5055C55E18E356F100DF670F /* NSPasteboardItem+additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSPasteboardItem+additions.m"; path = "../../NSPasteboardItem+additions.m"; sourceTree = "<group>"; };
+		5055C55F18E356F100DF670F /* IndexWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndexWebView.h; path = ../../IndexWebView.h; sourceTree = "<group>"; };
+		5055C56018E356F100DF670F /* NSMutableString+additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableString+additions.h"; path = "../../NSMutableString+additions.h"; sourceTree = "<group>"; };
+		5055C56118E356F100DF670F /* NSPasteboardItem+additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSPasteboardItem+additions.h"; path = "../../NSPasteboardItem+additions.h"; sourceTree = "<group>"; };
+		5055C56618E3570A00DF670F /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = ../../index.html; sourceTree = "<group>"; };
+		5055C56918E3580600DF670F /* example.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = example.txt; sourceTree = "<group>"; };
+		5055C56B18E3585100DF670F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5055C53918E356C900DF670F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5055C56C18E3585100DF670F /* WebKit.framework in Frameworks */,
+				5055C54018E356C900DF670F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5055C53318E356C900DF670F = {
+			isa = PBXGroup;
+			children = (
+				5055C54518E356C900DF670F /* TBIndexParserExample */,
+				5055C53E18E356C900DF670F /* Frameworks */,
+				5055C53D18E356C900DF670F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5055C53D18E356C900DF670F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5055C53C18E356C900DF670F /* TBIndexParserExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5055C53E18E356C900DF670F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5055C56B18E3585100DF670F /* WebKit.framework */,
+				5055C53F18E356C900DF670F /* Cocoa.framework */,
+				5055C54118E356C900DF670F /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5055C54118E356C900DF670F /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5055C54218E356C900DF670F /* AppKit.framework */,
+				5055C54318E356C900DF670F /* CoreData.framework */,
+				5055C54418E356C900DF670F /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		5055C54518E356C900DF670F /* TBIndexParserExample */ = {
+			isa = PBXGroup;
+			children = (
+				5055C55118E356C900DF670F /* TBAppDelegate.h */,
+				5055C55218E356C900DF670F /* TBAppDelegate.m */,
+				5055C55418E356C900DF670F /* MainMenu.xib */,
+				5055C56818E3571000DF670F /* IndexParser */,
+				5055C54618E356C900DF670F /* Supporting Files */,
+			);
+			path = TBIndexParserExample;
+			sourceTree = "<group>";
+		};
+		5055C54618E356C900DF670F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5055C54718E356C900DF670F /* TBIndexParserExample-Info.plist */,
+				5055C54818E356C900DF670F /* InfoPlist.strings */,
+				5055C54B18E356C900DF670F /* main.m */,
+				5055C54D18E356C900DF670F /* TBIndexParserExample-Prefix.pch */,
+				5055C54E18E356C900DF670F /* Credits.rtf */,
+				5055C56918E3580600DF670F /* example.txt */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5055C56518E356FC00DF670F /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				5055C55D18E356F100DF670F /* NSMutableString+additions.m */,
+				5055C56018E356F100DF670F /* NSMutableString+additions.h */,
+				5055C55E18E356F100DF670F /* NSPasteboardItem+additions.m */,
+				5055C56118E356F100DF670F /* NSPasteboardItem+additions.h */,
+			);
+			name = Additions;
+			sourceTree = "<group>";
+		};
+		5055C56818E3571000DF670F /* IndexParser */ = {
+			isa = PBXGroup;
+			children = (
+				5055C56618E3570A00DF670F /* index.html */,
+				5055C55F18E356F100DF670F /* IndexWebView.h */,
+				5055C55C18E356F100DF670F /* IndexWebView.m */,
+				5055C56518E356FC00DF670F /* Additions */,
+			);
+			name = IndexParser;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5055C53B18E356C900DF670F /* TBIndexParserExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5055C55918E356C900DF670F /* Build configuration list for PBXNativeTarget "TBIndexParserExample" */;
+			buildPhases = (
+				5055C53818E356C900DF670F /* Sources */,
+				5055C53918E356C900DF670F /* Frameworks */,
+				5055C53A18E356C900DF670F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TBIndexParserExample;
+			productName = TBIndexParserExample;
+			productReference = 5055C53C18E356C900DF670F /* TBIndexParserExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5055C53418E356C900DF670F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TB;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Lisacintosh;
+			};
+			buildConfigurationList = 5055C53718E356C900DF670F /* Build configuration list for PBXProject "TBIndexParserExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5055C53318E356C900DF670F;
+			productRefGroup = 5055C53D18E356C900DF670F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5055C53B18E356C900DF670F /* TBIndexParserExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5055C53A18E356C900DF670F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5055C54A18E356C900DF670F /* InfoPlist.strings in Resources */,
+				5055C55018E356C900DF670F /* Credits.rtf in Resources */,
+				5055C55618E356C900DF670F /* MainMenu.xib in Resources */,
+				5055C56718E3570A00DF670F /* index.html in Resources */,
+				5055C56A18E3580600DF670F /* example.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5055C53818E356C900DF670F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5055C54C18E356C900DF670F /* main.m in Sources */,
+				5055C55318E356C900DF670F /* TBAppDelegate.m in Sources */,
+				5055C56218E356F100DF670F /* IndexWebView.m in Sources */,
+				5055C56318E356F100DF670F /* NSMutableString+additions.m in Sources */,
+				5055C56418E356F100DF670F /* NSPasteboardItem+additions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5055C54818E356C900DF670F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5055C54918E356C900DF670F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5055C54E18E356C900DF670F /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5055C54F18E356C900DF670F /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		5055C55418E356C900DF670F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5055C55518E356C900DF670F /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5055C55718E356C900DF670F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5055C55818E356C900DF670F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5055C55A18E356C900DF670F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TBIndexParserExample/TBIndexParserExample-Prefix.pch";
+				INFOPLIST_FILE = "TBIndexParserExample/TBIndexParserExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5055C55B18E356C900DF670F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TBIndexParserExample/TBIndexParserExample-Prefix.pch";
+				INFOPLIST_FILE = "TBIndexParserExample/TBIndexParserExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5055C53718E356C900DF670F /* Build configuration list for PBXProject "TBIndexParserExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5055C55718E356C900DF670F /* Debug */,
+				5055C55818E356C900DF670F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5055C55918E356C900DF670F /* Build configuration list for PBXNativeTarget "TBIndexParserExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5055C55A18E356C900DF670F /* Debug */,
+				5055C55B18E356C900DF670F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5055C53418E356C900DF670F /* Project object */;
+}

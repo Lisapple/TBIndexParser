@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+			
+			<style>
+				
+				body {
+					font-family:Helvetica, sans-serif;
+					font-size:12.5px;
+					
+					margin:9px;
+				}
+				
+				input[type="checkbox"]+label {
+					-webkit-user-select:none;
+					user-select:none;
+				}
+				
+				input[type="checkbox"] {
+					-webkit-appearance:none;
+					
+					position:absolute;
+					top:6px;
+					
+					border:1px solid #bbb;
+					
+					padding:7px;
+					border-radius:3px;
+					display:inline-block;
+					position:relative;
+					
+					-webkit-user-select:none;
+					user-select:none;
+				}
+				
+				input[type="checkbox"]:checked {
+					box-shadow:inset 0px 2px 2px #ccc;
+				}
+				
+				input[type="checkbox"]:checked:after {
+					content:'\2715';
+					font-size:14px;
+					position:absolute;
+					top:-2px;
+					left:1px;
+					
+					color:#000;
+					font-weight:bold;
+				}
+				
+				input[type="checkbox"]:checked+span {
+					color:#777;
+					text-decoration:line-through;
+				}
+				
+				span.countdown {
+					background-color:#444;
+					color:#fff;
+					
+					padding:1px 2px;
+					
+					border-radius:4px;
+					font-size:12px;
+					font-weight:bold;
+					
+					margin-right:4px;
+					
+					position:relative;
+					
+					-webkit-user-select:none;
+					user-select:none;
+				}
+				
+				span.finished {
+					background-color:#aaa;
+				}
+				
+				span.finished+span {
+					color:#777;
+					text-decoration:line-through;
+				}
+				
+				span.countdown:not(:hover) input {
+					-webkit-animation:fade-out 0.25s;
+				}
+				
+				span.countdown:hover input {
+					-webkit-animation:fade-in 0.5s;
+				}
+				
+				@-webkit-keyframes fade-in {
+					from { opacity:0; }
+					to { opacity:1; }
+				}
+				
+				@-webkit-keyframes fade-out {
+					from { opacity:1; }
+					to { opacity:0; }
+				}
+				
+				span.countdown input {
+					opacity:0;
+					
+					-webkit-user-select:none;
+					user-select:none;
+				}
+				
+				span.countdown:hover input {
+					opacity:1;
+				}
+				
+				span.countdown input[type=button] {
+					background-color:#444;
+					color:#fff;
+					border:1px solid #fff;
+					
+					position:relative;
+					top:0px;
+					
+					border-radius:4px;
+					
+					width:16px;
+					height:16px;
+					padding:0px;
+					
+					font-weight:bold;
+				}
+				
+				span.countdown input[type=button]:hover {
+					background-color:#777;
+					
+					position:relative;
+				}
+				
+				span.countdown input[type=button].up {
+					top:-16px;
+					left:2px;
+					
+					border-radius:4px 4px 0px 0px;
+					
+					position:absolute;
+				}
+				
+				span.countdown input[type=button].down {
+					top:16px;
+					left:2px;
+					
+					border-radius:0px 0px 4px 4px;
+					
+					position:absolute;
+				}
+				
+				a {
+					color:#555;
+				}
+				
+				</style>
+	</head>
+	<body>
+		
+		{{@}}
+		
+		<script>function increment(sender){var ct=sender.parentNode.childNodes.item(2).textContent;var rem=parseInt(ct.split('/')[0]);var lim=parseInt(ct.split('/')[1]);if(rem<lim){sender.parentNode.childNodes.item(2).textContent=++rem+' / '+lim;}if(rem===lim){sender.parentNode.className="countdown finished";}} function decrement(sender){var ct=sender.parentNode.childNodes.item(2).textContent; var rem=parseInt(ct.split('/')[0]);var lim=parseInt(ct.split('/')[1]);if(0<rem){sender.parentNode.childNodes.item(2).textContent=--rem+' / '+lim;}if(rem!==lim){sender.parentNode.className="countdown";}}</script>
+		
+	</body>
+</html>
