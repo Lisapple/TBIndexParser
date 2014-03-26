@@ -7,6 +7,17 @@ This project is part of [Tea Box](http://www.lisacintosh.com/tea-box/) applicati
 
 This is a Mardown-like formatting class to convert plain text to HTML (with Javascript for interactive elements).
 
+I've created this application in febuary 2013 and I release the code source and resources on MIT Licence.
+
+_Xcode 4.6+ and Mac OS X.6 required._
+
+[Download Tea Box](http://lisacintosh.com/tea-box/)
+
+[Lisacintosh.com](http://lisacintosh.com/), 2014
+
+
+-----
+
 The syntax is:
 
 #### Headers:
