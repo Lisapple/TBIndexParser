@@ -11,6 +11,9 @@ I've created this application in febuary 2013 and I release the code source and 
 
 _Xcode 4.6+ and Mac OS X.6 required._
 
+You can use it with [Cocoapods](http://cocoapods.org/) by adding to your [Podfile](http://guides.cocoapods.org/syntax/podfile.html):
+`pod 'TBIndexParser', :podspec => 'https://raw.githubusercontent.com/Lisapple/Specs/master/TBIndexParser/1.0/TBIndexParser.podspec'`
+
 [Download Tea Box](http://lisacintosh.com/tea-box/)
 
 [Lisacintosh.com](http://lisacintosh.com/), 2014
