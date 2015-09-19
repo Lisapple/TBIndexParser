@@ -42,8 +42,6 @@
         lastModificationDate = date;
 	}
 	
-	NSDate * beforeDate = [NSDate date];
-	
 	NSMutableString * string = [[NSMutableString alloc] initWithContentsOfURL:indexURL
 																 usedEncoding:nil
 																		error:NULL];
@@ -157,8 +155,6 @@
 	self.UIDelegate = self;
 	self.resourceLoadDelegate = self;
 	
-	NSLog(@"Reading Index file into %.3f ms", ([[NSDate date] timeIntervalSinceDate:beforeDate] * 1000.));
-	
 	return YES;
 }
 
@@ -175,7 +171,7 @@
 {
 	BOOL shouldDrag = YES;
 	if ([_delegate respondsToSelector:@selector(indexWebView:shouldDragFile:dragOperation:)]) {
-		NSArray * items = [[sender draggingPasteboard] pasteboardItems];
+		NSArray * items = [sender draggingPasteboard].pasteboardItems;
 		if (items.count == 1) {
 			NSPasteboardItem * item = items[0];
 			shouldDrag = [_delegate indexWebView:self shouldDragFile:item.filePath dragOperation:[sender draggingSourceOperationMask]];
@@ -187,26 +183,22 @@
 - (BOOL)performDragOperation:(id < NSDraggingInfo >)sender
 {
 	if ([_delegate respondsToSelector:@selector(indexWebView:didDragFile:dragOperation:)]) {
-		NSArray * items = [[sender draggingPasteboard] pasteboardItems];
+		NSArray * items = [sender draggingPasteboard].pasteboardItems;
 		if (items.count == 1) {
 			NSPasteboardItem * item = items[0];
 			[_delegate indexWebView:self didDragFile:item.filePath dragOperation:[sender draggingSourceOperationMask]];
 		}
 	}
-	
 	return YES;
 }
 
-- (void)draggingExited:(id < NSDraggingInfo >)sender
-{
-}
+- (void)draggingExited:(id < NSDraggingInfo >)sender { }
 
 #pragma mark - WebView UI Delegate -
 
 - (NSURLRequest *)webView:(WebView *)sender resource:(id)identifier willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)redirectResponse fromDataSource:(WebDataSource *)dataSource
 {
-	NSLog(@"%@", NSStringFromSelector(_cmd));
-	if ([request.URL isFileURL] || [request.URL.absoluteString isEqualToString:@"about:blank"])
+	if (request.URL.fileURL || [request.URL.absoluteString isEqualToString:@"about:blank"])
 		return nil;
 	
 	return request;
@@ -214,11 +206,7 @@
 
 - (id)webView:(WebView *)sender identifierForInitialRequest:(NSURLRequest *)request fromDataSource:(WebDataSource *)dataSource
 {
-	NSLog(@"webView:identifierForInitialRequest:fromDataSource: %@", request.URL.relativeString);
-	
-	if ([request.URL.relativeString isEqualToString:@"about:blank"]) {// For "about:blank"
-		//return nil;
-	} else {// For other links
+	if (![request.URL.relativeString isEqualToString:@"about:blank"]) {// For other links than "about:blank"
 		/* URL looks like "applewebdata://XXX-XXX-XXX/www.example.com/search/query?q=test", remove unused part */
 		NSMutableArray * components = [[request.URL.relativeString componentsSeparatedByString:@"/"] mutableCopy];
 		if (components.count > 3) {
@@ -247,19 +235,6 @@
 	return (identifier)? identifier : request;
 }
 
-/*
- - (void)webView:(WebView *)sender mouseDidMoveOverElement:(NSDictionary *)elementInformation modifierFlags:(NSUInteger)modifierFlags
- {
- NSLog(@"webView:mouseDidMoveOverElement: %@ modifierFlags:", elementInformation);
- 
- id element = [elementInformation valueForKey:WebElementDOMNodeKey];
- if (element && [element isKindOfClass:[DOMHTMLInputElement class]]) {
- DOMHTMLInputElement * checkbox = element;
- NSLog(@"inputElement = %@", (checkbox.checked)? @"checked" : @"not checked");
- }
- }
- */
-
 - (NSArray *)webView:(WebView *)sender contextMenuItemsForElement:(NSDictionary *)element defaultMenuItems:(NSArray *)defaultMenuItems
 {
 	return @[];
@@ -274,8 +249,6 @@
 {
 	if (!indexURL)
 		return ;
-	
-	NSDate * beforeDate = [NSDate date];
 	
 	/* Checkboxes */
 	DOMNodeList * checkboxList = [self.mainFrame.DOMDocument getElementsByClassName:@"checkbox"];
@@ -328,8 +301,6 @@
 	
 	/* Save the file */
 	[[string dataUsingEncoding:NSUTF8StringEncoding] writeToURL:indexURL atomically:YES];
-	
-	NSLog(@"Saving Index file into %.3f ms", ([[NSDate date] timeIntervalSinceDate:beforeDate] * 1000.));
 }
 
 @end

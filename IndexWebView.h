@@ -22,7 +22,7 @@
 
 @end
 
-@interface IndexWebView : WebView
+@interface IndexWebView : WebView <WebUIDelegate, WebResourceLoadDelegate>
 {
 	NSString * indexPath;
 	NSArray * linkedSteps;

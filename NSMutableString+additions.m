@@ -24,9 +24,7 @@
 	
 	do {
 		NSRange remainingRange = NSMakeRange(currentIndex, length - currentIndex);
-		NSRange startRange = [self rangeOfString:startString
-										 options:0
-										   range:remainingRange];
+		NSRange startRange = [self rangeOfString:startString options:0 range:remainingRange];
 		if (startRange.location == NSNotFound)// If (no strings found, we reach the end of the string, break the loop
 			break;
 		
@@ -40,12 +38,10 @@
 		
 		NSRange endRange;
 		if ([endingStringOrOption isEqualToString:kEndingStringWhiteSpaceOrLineBreak]) {
-			NSRange endRangeForWhiteSpace = [self rangeOfString:kEndingStringWhiteSpace
-														options:0
+			NSRange endRangeForWhiteSpace = [self rangeOfString:kEndingStringWhiteSpace options:0
 														  range:NSMakeRange(startRange.location + endString.length,
 																			length - startRange.location - endString.length)];
-			NSRange endRangeForLineBreak = [self rangeOfString:kEndingStringLineBreak
-													   options:0
+			NSRange endRangeForLineBreak = [self rangeOfString:kEndingStringLineBreak options:0
 														 range:NSMakeRange(startRange.location + endString.length,
 																		   length - startRange.location - endString.length)];
 			
@@ -92,7 +88,7 @@
 			NSMutableString * mutableOccurence = [[self substringWithRange:newRange] mutableCopy];
 			
 			/* Use synchrone block call but it's not possible to call synchrone block with no arguments so call the block as asynchrone block than call an empty synchrone block into the same queue. */
-			dispatch_queue_t queue = dispatch_queue_create("com.lisacintosh.test.queue", NULL);
+			dispatch_queue_t queue = dispatch_queue_create("com.lisacintosh.index-parser.enumerate-occurences-queue", NULL);
 			dispatch_async(queue, ^{
 				block(mutableOccurence, newRange);
 			});

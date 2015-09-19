@@ -14,9 +14,7 @@
 {
 	NSString * fileURLString = [[NSString alloc] initWithData:[self dataForType:@"public.file-url"]
 													 encoding:NSUTF8StringEncoding];
-	NSURL * fileURL = [NSURL URLWithString:fileURLString];
-	
-	return fileURL;
+	return [NSURL URLWithString:fileURLString];
 }
 
 - (NSString *)filePath
